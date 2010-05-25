@@ -10,7 +10,7 @@ cd ~/Sites/jquery/
 git pull origin master
 echo "`tput setaf 2` \n2. Making jQuery"
 tput op
-make
+make min
 
 echo "`tput setaf 2` \n3. Updating jQuery rails"
 tput op
