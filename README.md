@@ -12,13 +12,13 @@ So, for example, if you make this template in `~/Sites`:<br>
 Process
 =======
 1.  Download latest jQuery min and place into javascripts folder
-2.  Download jQuery drivers and place into javascripts folder
-3.  Removing prototype js
+2.  Download latest jQuery drivers and place into javascripts folder
+3.  Remove old prototype js
 4.  Overriding javascript_include_tag to include new jQuery js
 
 License
 =======
-You are free to make any and all modifications to the script and use it in whatever appropriate context you desire, as long as you keep the attributions in place.
+You are free to make any and all modifications to the template and use it in whatever appropriate context you desire, as long as you keep the attributions in place.
 
 Pull Requests
 =============
