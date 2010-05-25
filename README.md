@@ -1,29 +1,20 @@
 About
 =====
-Bash script to setup a new Rails 3 app to use the new jQuery drivers instead of the default prototype ones.  More information is available at: http://loganleger.com/rails-3-jquery
+Rails template to setup a new Rails 3 app to use the new jQuery drivers instead of the default prototype ones.  More information is available at: http://loganleger.com/rails-3-jquery
 
 How to Use
 ==========
-`./rails3jquery.sh <path/to/app>`
+`rails -m <path/to/jquery.rb>`
 
-So, for example, if you make your app (via `rails new_app`) in `~/Sites`:<br>
+So, for example, if you make this template in `~/Sites`:<br>
 `./rails3jquery.sh ~/Sites/new_app`
 
 Process
 =======
-1.  Update jQuery via git
-2.  Make new jQuery js files
-3.  Update jQuery drivers
-4.  Removing prototype js"
-5.  Copying new jQuery js
-6.  Overriding javascript_include_tag to include new jQuery js
-
-Prerequisites
-=============
-1.  Cloned git repo of jQuery: http://github.com/jquery/jquery
-2.  Cloned git repo of jQuery drivers: http://github.com/rails/jquery-ujs
-3.  Edit paths in file to reflect these repos (I store mine in ~/Sites/): lines 9, 17, 27, 28
-4.  (opt) chmod a+x to make script executable
+1.  Download latest jQuery min and place into javascripts folder
+2.  Download jQuery drivers and place into javascripts folder
+3.  Removing prototype js
+4.  Overriding javascript_include_tag to include new jQuery js
 
 License
 =======
@@ -32,3 +23,7 @@ You are free to make any and all modifications to the script and use it in whate
 Pull Requests
 =============
 I'm sure there are a lot of ways this can be done better, so if you make changes please send me a pull request.
+
+Bash
+====
+At first, I wrote this as a bash script, called `rails3jquery.sh`, which I've left here for posterity. You can read more about it in `README-bash.md`. However, less than six hours later I trashed this inefficient script for a Rails template, which is a much better system.
