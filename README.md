@@ -7,7 +7,7 @@ How to Use
 `rails -m <path/to/jquery.rb>`
 
 So, for example, if you make this template in `~/Sites`:<br>
-`./rails3jquery.sh ~/Sites/new_app`
+`rails -m ~/Sites/jquery.rb`
 
 Process
 =======
