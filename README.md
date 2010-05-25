@@ -4,7 +4,10 @@ Bash script to setup a new Rails 3 app to use the new jQuery drivers instead of 
 
 How to Use
 ==========
-./rails3jquery.sh ~/Sites/new_app
+`./rails3jquery.sh <path/to/app>`
+
+So, for example, if you make your app (via `rails new_app`) in `~/Sites`:
+`./rails3jquery.sh ~/Sites/new_app`
 
 Process
 =======
