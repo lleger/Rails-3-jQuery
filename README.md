@@ -1,6 +1,6 @@
 About
 =====
-Bash script to setup a new Rails 3 app to use the new jQuery drivers instead of the default prototype ones.
+Bash script to setup a new Rails 3 app to use the new jQuery drivers instead of the default prototype ones.  More information is available at: http://loganleger.com/rails-3-jquery
 
 How to Use
 ==========
