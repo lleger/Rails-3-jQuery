@@ -6,7 +6,7 @@ How to Use
 ==========
 `./rails3jquery.sh <path/to/app>`
 
-So, for example, if you make your app (via `rails new_app`) in `~/Sites`:
+So, for example, if you make your app (via `rails new_app`) in `~/Sites`:<br>
 `./rails3jquery.sh ~/Sites/new_app`
 
 Process
