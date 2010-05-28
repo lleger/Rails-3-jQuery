@@ -1,6 +1,8 @@
 About
 =====
-Rails template to setup a new Rails 3 app to use the new jQuery drivers instead of the default prototype ones.  More information is available at: http://loganleger.com/rails-3-jquery
+Rails template to setup a new Rails 3 app to use the new jQuery drivers instead of the default prototype ones.  More information is available at: http://loganleger.com/rails-3-jquery.
+
+**Note: this was originally written as a bash script which is included here for posterity. However, I wouldn't use that. The Rails template is a much better system. In fact, just ignore it. I'd even immediately delete it if I were you.**
 
 How to Use
 ==========
