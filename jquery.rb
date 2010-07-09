@@ -5,16 +5,17 @@
 # Written by: Logan Leger, logan@loganleger.com
 # http://github.com/lleger/Rails-3-jQuery
 
+# Deleting old prototype drivers
+# Do this first so that you don't delete the new jQuery rails one below
+inside('public/javascripts') do
+	run "rm -rf controls.js dragdrop.js effects.js prototype.js rails.js"
+end
+
 # Downloading latest jQuery.min
 run "curl -L http://code.jquery.com/jquery-latest.min.js > public/javascripts/jquery.js"
 
 # Downloading latest jQuery drivers
 run "curl -L http://github.com/rails/jquery-ujs/raw/master/src/rails.js > public/javascripts/rails.js"
-
-# Deleting old prototype drivers
-inside('public/javascripts') do
-	run "rm -rf controls.js dragdrop.js effects.js prototype.js rails.js"
-end
 
 # Overriding javascript_include_tag to include new jQuery js
 initializer 'jquery.rb', <<-CODE
