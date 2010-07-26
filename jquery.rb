@@ -12,10 +12,10 @@ inside('public/javascripts') do
 end
 
 # Downloading latest jQuery.min
-run "curl -L http://code.jquery.com/jquery-latest.min.js > public/javascripts/jquery.js"
+get "http://code.jquery.com/jquery-latest.min.js", "public/javascripts/jquery.js"
 
 # Downloading latest jQuery drivers
-run "curl -L http://github.com/rails/jquery-ujs/raw/master/src/rails.js > public/javascripts/rails.js"
+get "http://github.com/rails/jquery-ujs/raw/master/src/rails.js", "public/javascripts/rails.js"
 
 # Overriding javascript_include_tag to include new jQuery js
 initializer 'jquery.rb', <<-CODE
