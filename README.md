@@ -6,13 +6,15 @@ How to Use
 ==========
 `rails new <appname> -m <path/to/jquery.rb>`
 
+**The template will ask you if you want to override :defaults and add :jquery or just do one or the other.**
+
 So, for example, if you make download this template in `~/Sites`:<br>
 `rails new <appname> -m ~/Sites/jquery.rb`
 
 Otherwise, you can run it directly from github like so:<br>
 `rails new <appname> -m http://github.com/lleger/Rails-3-jQuery/raw/master/jquery.rb`
 
-This template also makes a new javascript expansion, :jquery, for use in the javascript_include_tag. For example:<br>
+This template also makes a new javascript expansion if requested, :jquery, for use in the javascript_include_tag. For example:<br>
 `<% javascript_include_tag :jquery %>`
 
 Process
@@ -22,7 +24,7 @@ This template works via this process:
 1.	Remove old prototype js
 2.  Download latest jQuery min and place into javascripts folder
 3.  Download latest jQuery drivers and place into javascripts folder
-4.  Overriding javascript_include_tag to include new jQuery js and create a new jQuery expansion
+4.  Create requested javascript expansions
 
 License
 =======
