@@ -4,10 +4,13 @@ Rails template to setup a new Rails 3 app to use the new jQuery drivers instead 
 
 How to Use
 ==========
-`rails -m <path/to/jquery.rb>`
+`rails new <appname> -m <path/to/jquery.rb>`
 
-So, for example, if you make this template in `~/Sites`:<br>
-`rails -m ~/Sites/jquery.rb`
+So, for example, if you make download this template in `~/Sites`:<br>
+`rails new <appname> -m ~/Sites/jquery.rb`
+
+Otherwise, you can run it directly from github like so:<br>
+`rails new <appname> -m http://github.com/lleger/Rails-3-jQuery/raw/master/jquery.rb`
 
 This template also makes a new javascript expansion, :jquery, for use in the javascript_include_tag. For example:<br>
 `<% javascript_include_tag :jquery %>`
