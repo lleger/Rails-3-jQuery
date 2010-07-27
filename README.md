@@ -2,6 +2,8 @@ About
 =====
 Rails template to setup a new Rails 3 app to use the new jQuery drivers instead of the default prototype ones.  More information is available at: http://loganleger.com/rails-3-jquery.
 
+As of Rails 3 RC, I can't seem to override the :defaults expansion, so instead I've created a :jquery one. If you dig around and find a better solution, please send me a pull request.
+
 **Note: this was originally written as a bash script which is included here for posterity. However, I wouldn't use that. The Rails template is a much better system. In fact, just ignore it. I'd even immediately delete it if I were you.**
 
 How to Use
