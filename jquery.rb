@@ -1,7 +1,6 @@
 # This template installs the new jQuery drivers, removes
 # the old prototype drivers, and installs an initializer
-# which overrides the javascript_include_tag to include
-# jQuery and the new drivers with :default
+# which provides a jquery javscript expansion
 # Written by: Logan Leger, logan@loganleger.com
 # http://github.com/lleger/Rails-3-jQuery
 
@@ -17,14 +16,11 @@ get "http://code.jquery.com/jquery-latest.min.js", "public/javascripts/jquery.js
 # Downloading latest jQuery drivers
 get "http://github.com/rails/jquery-ujs/raw/master/src/rails.js", "public/javascripts/rails.js"
 
-# Overriding javascript_include_tag to include new jQuery js
+# Setting a jquery javscript expansion
+# Use this in a view like so: javascript_include_tag :jquery
 initializer 'jquery.rb', <<-CODE
-# Switch the javascript_include_tag :defaults to use jQuery instead of
-# the default prototype helpers.
-# Credits: http://webtech.union.rpi.edu/blog/2010/02/21/jquery-and-rails-3/
-if ActionView::Helpers::AssetTagHelper.const_defined?(:JAVASCRIPT_DEFAULT_SOURCES)
-	ActionView::Helpers::AssetTagHelper.send(:remove_const, \"JAVASCRIPT_DEFAULT_SOURCES\")
-end
-ActionView::Helpers::AssetTagHelper::JAVASCRIPT_DEFAULT_SOURCES = ['jquery', 'rails']
-ActionView::Helpers::AssetTagHelper::reset_javascript_include_default
+# Switch the javascript_include_tag :defaults to
+# use jQuery instead of the default prototype helpers.
+
+ActionView::Helpers::AssetTagHelper.register_javascript_expansion :jquery => ['jquery', 'rails']
 CODE
