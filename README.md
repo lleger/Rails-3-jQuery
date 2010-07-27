@@ -9,16 +9,16 @@ How to Use
 So, for example, if you make this template in `~/Sites`:<br>
 `rails -m ~/Sites/jquery.rb`
 
-This template also makes a new javascript expansion, :jquery, for use in the javascript_include_tag. For example:
+This template also makes a new javascript expansion, :jquery, for use in the javascript_include_tag. For example:<br>
 `<% javascript_include_tag :jquery %>`
 
 Process
 =======
 This template works via this process:
 
-1.  Download latest jQuery min and place into javascripts folder
-2.  Download latest jQuery drivers and place into javascripts folder
-3.  Remove old prototype js
+1.	Remove old prototype js
+2.  Download latest jQuery min and place into javascripts folder
+3.  Download latest jQuery drivers and place into javascripts folder
 4.  Overriding javascript_include_tag to include new jQuery js and create a new jQuery expansion
 
 License
