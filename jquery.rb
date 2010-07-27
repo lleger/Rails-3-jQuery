@@ -1,6 +1,7 @@
 # This template installs the new jQuery drivers, removes
 # the old prototype drivers, and installs an initializer
 # which provides a jquery javscript expansion
+# and overrides the :defaults expansion
 # Written by: Logan Leger, logan@loganleger.com
 # http://github.com/lleger/Rails-3-jQuery
 
