@@ -27,7 +27,11 @@ if yes?("Override :defaults and setup :jquery expansion?")
 	# http://github.com/lleger/Rails-3-jQuery
 
 	ActionView::Helpers::AssetTagHelper.register_javascript_expansion :jquery => ['jquery', 'rails']
-	Rails.application.config.action_view.javascript_expansions[:defaults] = ['jquery', 'rails']
+	ActiveSupport.on_load(:action_view) do
+	  ActiveSupport.on_load(:after_initialize) do
+	    ActionView::Helpers::AssetTagHelper::register_javascript_expansion :defaults => ['jquery', 'rails']
+	  end
+	end
 	CODE
 elsif yes?("Override :defaults only?")
 	initializer 'jquery.rb', <<-CODE
@@ -36,7 +40,11 @@ elsif yes?("Override :defaults only?")
 	# Written by: Logan Leger, logan@loganleger.com
 	# http://github.com/lleger/Rails-3-jQuery
 
-	Rails.application.config.action_view.javascript_expansions[:defaults] = ['jquery', 'rails']
+	ActiveSupport.on_load(:action_view) do
+	  ActiveSupport.on_load(:after_initialize) do
+	    ActionView::Helpers::AssetTagHelper::register_javascript_expansion :defaults => ['jquery', 'rails']
+	  end
+	end
 	CODE
 elsif yes?("Setup :jquery expansion only?")
 	initializer 'jquery.rb', <<-CODE
