@@ -8,7 +8,7 @@
 # Deleting old prototype drivers
 # Do this first so that you don't delete the new jQuery rails one below
 inside('public/javascripts') do
-	run "rm -rf controls.js dragdrop.js effects.js prototype.js rails.js"
+	FileUtils.rm_rf %w(controls.js dragdrop.js effects.js prototype.js rails.js)
 end
 
 # Downloading latest jQuery.min
