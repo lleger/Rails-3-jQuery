@@ -1,12 +1,10 @@
 About
 =====
-Rails template to setup a new Rails 3 app to use the new jQuery drivers instead of the default prototype ones. More information is available at: http://loganleger.com/rails-3-jquery.
+Rails template to setup a new Rails 3 app to use the new jQuery drivers instead of the default prototype ones.
 
 How to Use - New Project
 ========================
 `rails new <appname> -m <path/to/jquery.rb>`
-
-**The template will ask you if you want to override :defaults and add :jquery or just do one or the other.**
 
 So, for example, if you make download this template in `~/Sites`:<br>
 `rails new <appname> -m ~/Sites/jquery.rb`
@@ -14,8 +12,8 @@ So, for example, if you make download this template in `~/Sites`:<br>
 Otherwise, you can run it directly from github like so:<br>
 `rails new <appname> -m https://github.com/lleger/Rails-3-jQuery/raw/master/jquery.rb`
 
-This template also makes a new javascript expansion if requested, :jquery, for use in the javascript_include_tag. For example:<br>
-`<% javascript_include_tag :jquery %>`
+This template also makes a new javascript expansion, :cdn, for use in the javascript_include_tag that pulls jquery.min.js from Google's cache. For example:<br>
+`<% javascript_include_tag :cdn %>`
 
 How to Use - Existing Project
 =============================
