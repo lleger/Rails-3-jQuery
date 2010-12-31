@@ -12,7 +12,7 @@ So, for example, if you make download this template in `~/Sites`:<br>
 `rails new <appname> -m ~/Sites/jquery.rb`
 
 Otherwise, you can run it directly from github like so:<br>
-`rails new <appname> -m http://github.com/lleger/Rails-3-jQuery/raw/master/jquery.rb`
+`rails new <appname> -m https://github.com/lleger/Rails-3-jQuery/raw/master/jquery.rb`
 
 This template also makes a new javascript expansion if requested, :jquery, for use in the javascript_include_tag. For example:<br>
 `<% javascript_include_tag :jquery %>`
@@ -22,13 +22,13 @@ How to Use - Existing Project
 If you're converting a Rails 3 app to jQuery, you can use
 `rake rails:template` to execute the template inside your existing app.
 
-`rake rails:template LOCATION=http://github.com/lleger/Rails-3-jQuery/raw/master/jquery.rb`
+`rake rails:template LOCATION=https://github.com/lleger/Rails-3-jQuery/raw/master/jquery.rb`
 
 Process
 =======
 This template works via this process:
 
-1.	Remove old prototype js
+1.  Remove old prototype js
 2.  Download latest jQuery min and place into javascripts folder
 3.  Download latest jQuery drivers and place into javascripts folder
 4.  Create requested javascript expansions
