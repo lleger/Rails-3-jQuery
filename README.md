@@ -26,7 +26,7 @@ Process
 =======
 This template works via this process:
 
-1.	Remove old prototype js
+1.  Remove old prototype js
 2.  Download latest jQuery min and place into javascripts folder
 3.  Download latest jQuery drivers and place into javascripts folder
 4.  Create requested javascript expansions
