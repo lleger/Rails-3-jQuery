@@ -22,6 +22,14 @@ If you're converting a Rails 3 app to jQuery, you can use
 
 `rake rails:template LOCATION=https://github.com/lleger/Rails-3-jQuery/raw/master/jquery.rb`
 
+How to Update
+=============
+The template creates a new rakefile called `jquery.rb` in `lib/tasks` that includes a rake tast `jquery:update` to update the jQuery js and Rails drivers js files. To use, simply run the following command:
+
+`rake jquery:update`
+
+The rake task will automatically download both js files and overwrite those in `public/javascripts`.
+
 Process
 =======
 This template works via this process:
