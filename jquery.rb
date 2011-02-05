@@ -34,7 +34,7 @@ end
 # jquery and rails drivers
 rakefile("jquery.rake") do
   <<-TASK
-require 'net/http'
+require 'net/https'
 require 'uri'
 
 namespace :jquery do
