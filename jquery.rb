@@ -40,9 +40,11 @@ require 'uri'
 namespace :jquery do
   desc "Update jQuery and Rails jQuery drivers"
   task :update do
-    http = Net::HTTP.new("code.jquery.com")
+    http = Net::HTTP.new("ajax.googleapis.com",443)
+    http.use_ssl = true
     http.start do |http|
-        resp = http.get("/jquery-latest.min.js")
+        http.use_ssl = true
+        resp = http.get("/ajax/libs/jquery/1/jquery.min.js")
         open("public/javascripts/jquery.js", "wb") do |file|
             file.write(resp.body)
         end
