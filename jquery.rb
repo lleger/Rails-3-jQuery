@@ -8,7 +8,7 @@
 # Delete old prototype drivers
 # Do this first so that you don't delete the new jQuery rails one below
 inside('public/javascripts') do
-	FileUtils.rm_rf %w(controls.js dragdrop.js effects.js prototype.js rails.js)
+  FileUtils.rm_rf %w(controls.js dragdrop.js effects.js prototype.js rails.js)
 end
 
 # Download latest jQuery.min
@@ -23,10 +23,10 @@ gsub_file 'config/application.rb', /#\s*(config.action_view.javascript_expansion
 
 # Add expansions to application.rb
 application do
-	"  # Added by the Rails 3 jQuery Template
-	  # http://github.com/lleger/Rails-3-jQuery, written by Logan Leger
-	  config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
-	  config.action_view.javascript_expansions[:cdn] = %w(https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js rails)\n"
+  " # Added by the Rails 3 jQuery Template
+    # http://github.com/lleger/Rails-3-jQuery, written by Logan Leger
+    config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
+    config.action_view.javascript_expansions[:cdn] = %w(https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js rails)\n"
 end
 
 # Add a jquery.rake file to lib/tasks
@@ -38,6 +38,7 @@ require 'net/https'
 require 'uri'
 
 namespace :jquery do
+  desc "Update jQuery and Rails jQuery drivers"
   task :update do
     http = Net::HTTP.new("code.jquery.com")
     http.start do |http|
@@ -57,8 +58,9 @@ namespace :jquery do
         end
     end
 
-    puts "Updated jQuery and Rails jQuery drivers!"
+    puts "jQuery and Rails jQuery drivers were updated!"
   end
 end
   TASK
 end
+
