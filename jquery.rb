@@ -34,6 +34,8 @@ end
 # jquery and rails drivers
 rakefile("jquery.rake") do
   <<-TASK
+# Created by the Rails 3 jQuery Template
+# http://github.com/lleger/Rails-3-jQuery, written by Logan Leger
 require 'net/https'
 require 'uri'
 
