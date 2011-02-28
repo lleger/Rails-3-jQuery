@@ -23,7 +23,7 @@ gsub_file 'config/application.rb', /#\s*(config.action_view.javascript_expansion
 
 # Add expansions to application.rb
 application do
-  " # Added by the Rails 3 jQuery Template
+  "  # Added by the Rails 3 jQuery Template
     # http://github.com/lleger/Rails-3-jQuery, written by Logan Leger
     config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
     config.action_view.javascript_expansions[:cdn] = %w(https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js rails)\n"
